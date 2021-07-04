@@ -1,5 +1,3 @@
-#lang sicp
-
 (define (cube-root x)
   (define (square x)
     (* x x))

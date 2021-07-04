@@ -1,5 +1,3 @@
-#lang sicp
-
 ;; actually the same as 1.17
 
 (define (double x)

@@ -1,5 +1,3 @@
-#lang sicp
-
 (define (sum-max a b c)
   (cond ((and (> a c) (> b c)) (+ a b))
         ((and (> a b) (> c b)) (+ a c))

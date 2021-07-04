@@ -1,5 +1,3 @@
-#lang sicp
-
 (define (recursion-f n)
   (cond ((< n 3) n)
         (else (+ (recursion-f (- n 1))

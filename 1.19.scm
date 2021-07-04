@@ -1,5 +1,3 @@
-#lang sicp
-
 ;; in math we can see the uniformity
 ;; of procedures and data more clearly
 
