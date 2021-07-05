@@ -1,15 +1,14 @@
-;; actually the same as 1.17
+#lang sicp
+
+;; 实际上和1.17一样
 
 (define (double x)
   (+ x x))
 
 (define (halve x)
-  ;; this definition :)
   (/ x 2))
 
 (define (mul a b)
-  ;; we should have swapped a,b when a < b.
-  ;; here we ignore it for convenience.
   (cond ((= b 0) 0)
         ((= b 1) a)
         ((odd? b) (+ a (mul a (- b 1))))

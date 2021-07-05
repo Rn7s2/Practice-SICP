@@ -1,5 +1,7 @@
-;; in math we can see the uniformity
-;; of procedures and data more clearly
+#lang sicp
+
+;; 在数学中我们可以更明显地看出
+;; 过程（函数）与数据的一致性
 
 (define (fib n)
   (define (square x)

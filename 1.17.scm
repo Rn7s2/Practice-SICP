@@ -1,13 +1,14 @@
+#lang sicp
+
 (define (double x)
   (+ x x))
 
 (define (halve x)
-  ;; this definition :)
+  ;; 这个定义有点搞笑
   (/ x 2))
 
 (define (mul a b)
-  ;; we should have swapped a,b when a < b.
-  ;; here we ignore it for convenience.
+  ;; 当a < b时我们本应交换a和b, 这里略
   (cond ((= b 0) 0)
         ((= b 1) a)
         ((odd? b) (+ a (mul a (- b 1))))

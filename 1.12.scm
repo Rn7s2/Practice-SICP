@@ -1,3 +1,5 @@
+#lang sicp
+
 (define (comb n k)
   (cond ((= k 0) 1)
         ((= n k) 1)
