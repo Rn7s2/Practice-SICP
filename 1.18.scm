@@ -1,7 +1,5 @@
 #lang sicp
 
-;; 实际上和1.17一样
-
 (define (double x)
   (+ x x))
 

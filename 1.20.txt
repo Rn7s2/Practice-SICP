@@ -1,0 +1,41 @@
+Note: G stands for gcd, and R stands for remainder
+
+Keep in mind that only "primary operators" + - * / = ... will
+need to call all the remainders.
+Function calls just use substitutions.
+
+Step 0 (call gcd) => 0: (G 206 40)
+Step 1 (call gcd) => 1: (G 40
+                           (R 206 40))
+Step 2 (call gcd) => 2: (G (R 206 40)
+                           (R 40
+                              (R 206 40)))
+Step 3 (call gcd) => 4: (G (R 40
+                              (R 206 40))
+                           (R (R 206 40)
+                              (R 40
+                                 (R 206 40))))
+Step 4 (call gcd) => 7: (G (R (R 206 40)
+                              (R 40
+                                 (R 206 40)))
+                           (R (R 40
+                                 (R 206 40))
+                              (R (R 206 40)
+                                 (R 40
+                                    (R 206 40)))))
+Step 5 (eval a) => 4: (R (R 206 40)
+                         (R 40
+                            (R 206 40)))
+
+Total: 0+1+2+4+7+4=18
+
+But, is there any formula to describe the relation?
+
+Let a[k] equals to 'contribution' of step k.
+a[0]=0
+a[1]=1
+if step k is not the last step, then a[k]=a[k-1]+a[k-2]+1.
+else a[k]=a[k-2]
+
+So the answer is sum a[n]+a[n-1]+...+a[0],
+in which n is the iteration count of gcd.
