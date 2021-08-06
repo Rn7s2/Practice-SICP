@@ -6,10 +6,10 @@
                  (A x (- y 1))))))
 
 (define (f n)
-  )
+  (* 2 n))
 
 (define (g n)
-  )
+  (expt 2 n))
 
 (define (h n)
-  )
+  (expt (expt 2 n)))
