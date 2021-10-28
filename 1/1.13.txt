@@ -1,0 +1,7 @@
+(fib n)
+等价于
+(/ (- (pow (/ (+ 1 (sqrt 5)) 2) n)
+      (pow (/ (- 1 (sqrt 5)) 2) n))
+   (sqrt 5))
+而(/ (pow (/ (- 1 (sqrt 5)) 2) n) (sqrt 5))小于(/ 1 2).
+所以(fib n)是最接近(/ (pow (/ (+ 1 (sqrt 5)) 2) n) (sqrt 5))的整数。
