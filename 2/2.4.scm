@@ -1,3 +1,5 @@
+#lang sicp
+
 (define (cons x y)
   (lambda (m) (m x y)))
 

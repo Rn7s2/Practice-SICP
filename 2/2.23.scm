@@ -1,3 +1,5 @@
+#lang sicp
+
 (define (for-each procedure list)
   (cond ((null? list) #t)
         (else

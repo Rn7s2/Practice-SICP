@@ -1,3 +1,5 @@
+#lang sicp
+
 (define (same-parity . lst)
   (define (filter is-odd lst)
     (if (null? lst)

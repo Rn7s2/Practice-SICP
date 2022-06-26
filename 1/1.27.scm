@@ -1,3 +1,5 @@
+#lang sicp
+
 (define (fermat-test n)
   (define (expmod base exp mod)
     (cond ((= exp 0) 1)

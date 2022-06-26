@@ -1,3 +1,5 @@
+#lang sicp
+
 (define (fast-prime? n)
   (define (fermat-test n)
     (define (expmod base exp mod)

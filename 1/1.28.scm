@@ -1,3 +1,5 @@
+#lang sicp
+
 (define (miller-rabin-test n)
   (define (expmod base exp mod)
     (cond ((= exp 0) 1)

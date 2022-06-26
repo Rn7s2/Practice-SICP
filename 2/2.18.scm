@@ -1,3 +1,5 @@
+#lang sicp
+
 (define (reverse list)
   (if (null? (cdr list))
       list

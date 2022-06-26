@@ -1,3 +1,5 @@
+#lang sicp
+
 (define (double x)
   (+ x x))
 

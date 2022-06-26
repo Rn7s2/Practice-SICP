@@ -1,3 +1,5 @@
+#lang sicp
+
 (define (fib n)
   (define (square x)
     (* x x))

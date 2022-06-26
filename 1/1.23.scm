@@ -1,3 +1,5 @@
+#lang sicp
+
 (define (prime? n)
   (define (find-divisor n test-divisor)
     (define (divides? d n)
