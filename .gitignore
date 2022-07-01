@@ -1,3 +1,6 @@
 *.scm~
 .markdown*
 *.bak
+/.vs/Practice-SICP
+/fsharp/obj
+/fsharp/bin
