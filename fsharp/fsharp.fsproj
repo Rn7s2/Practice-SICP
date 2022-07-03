@@ -1,13 +1,12 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
-
   <ItemGroup>
+    <Compile Include="2\2.1.fs" />
     <Compile Include="2\2.2.fs" />
+    <Compile Include="2\2.3.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
-
 </Project>
