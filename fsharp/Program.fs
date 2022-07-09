@@ -1,9 +1,6 @@
-﻿open Second.Second
-open Second.Third
+﻿open Second.Tenth
 
 [<EntryPoint>]
 let main args =
-    let rect = makeRectangle (makePoint 1 9) (makePoint 5 1)
-    printfn $"{areaRectangle rect}"
-    printfn $"{perimeterRectangle rect}"
+    test
     0
