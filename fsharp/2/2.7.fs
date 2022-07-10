@@ -1,7 +1,7 @@
 ﻿namespace Second
 
 module Seventh =
-    let makeInterval a b = (a, b)
+    let makeInterval (a: float) (b: float) = (a, b)
 
     let lowerBound x =
         let (a, _) = x

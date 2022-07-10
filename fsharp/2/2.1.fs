@@ -1,11 +1,11 @@
 ﻿namespace Second
 
 module First =
-    let numer x =
+    let numer (x: int * int) =
         let (numer, _) = x
         numer
 
-    let denom x =
+    let denom (x: int * int) =
         let (_, denom) = x
         denom
 

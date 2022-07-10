@@ -13,7 +13,11 @@
 		<Content Include="2\2.9.txt" />
 		<Compile Include="2\2.10.fs" />
 		<Compile Include="2\2.11.fs" />
+		<Compile Include="2\2.12.fs" />
+		<Compile Include="2\2.13.fs" />
+		<Compile Include="2\2.14.fs" />
+		<Content Include="2\2.15.txt" />
+		<Content Include="2\2.16.txt" />
 		<Compile Include="Program.fs" />
 	</ItemGroup>
-	<ItemGroup />
 </Project>

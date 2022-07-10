@@ -6,8 +6,8 @@ module Eleventh =
     // 无比混乱，只有非常频繁调用的代码才值得这样优化
     // 而且编译器的能力超乎我们的想象，根本不值得这么做！
     let mulInterval x y =
-        let pos n = n >= 0
-        let neg n = n < 0
+        let pos n = n >= 0.0
+        let neg n = n < 0.0
 
         let (al, ah, bl, bh) = (lowerBound x, upperBound x, lowerBound y, upperBound y)
 
