@@ -18,22 +18,25 @@
 (define (same-variable? v1 v2)
   (and (variable? v1) (variable? v2) (eq? v1 v2)))
 
-;; TODO: Debug
-(define (valid? x)
-  #t)
-
 (define (normalize x)
-  (cond ((not (valid? x)) #f)
-        ((number? x) x)
-        ((variable? x) x)
-        ((< (length x) 5)
-         (list (normalize (car x)) (cadr x) (normalize (caddr x))))
+  (cond ((or (number? x)
+             (variable? x)) x)
+        ((< (length x) 5) (list (normalize (car x)) (cadr x) (normalize (caddr x))))
         ((list? x)
          (if (and (eq? (cadr x) '+)
                   (eq? (cadddr x) '*))
-             (list (normalize (car x)) '+ (list (normalize (caddr x)) '* (normalize (car (cddddr x)))))
-             (list (list (normalize (car x)) (cadr x) (normalize (caddr x))) (cadddr x) (normalize (car (cddddr x))))))))
-
+             (append (list (normalize (car x))
+                           '+
+                           (list (normalize (caddr x))
+                                 '*
+                                 (normalize (car (cddddr x)))))
+                     (cdr (cddddr x)))
+             (append (list (list (normalize (car x))
+                                 (cadr x)
+                                 (normalize (caddr x)))
+                           (cadddr x)
+                           (normalize (car (cddddr x))))
+                     (cdr (cddddr x)))))))
 
 (define (make-sum a1 a2)
   (cond ((=number? a1 0) a2)
@@ -59,3 +62,8 @@
        (not (null? (cddr x)))))
 (define multiplier car)
 (define multiplicand caddr)
+
+(define (deriv-1 exp x)
+  (deriv (normalize exp) x))
+
+(deriv-1 '(x + 3 * (x * x + x + y + 2)) 'x)
